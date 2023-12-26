@@ -1,0 +1,157 @@
+                                    /* BLOCK EN TETE */
+.block {
+    background-color: #053941;
+    color: #7e5837f1;
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.titre-debutant h2 {
+    padding-top: 40px;
+    padding-bottom: 0;
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+.temps-debutant {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 2em;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+.temps {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+.temps p {
+    margin: 0;
+}
+
+.barre-vertical {
+    align-self: center;
+    height: 120px;
+    font-size: 3em;
+    width: 1px;
+    color: #7e5837f1;
+    margin: 0 20px;
+}
+
+.debutant-image {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+
+
+
+                                /* DESCRIPTION PRODUIT */
+
+
+                                
+.description h2 {
+    margin-left: 15.7%;
+    margin-top: 3%;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #7e5837f1;
+    font-size: 2em;
+}
+    
+.description p {
+    margin-left: 15.7%;
+    margin-right: 15.7%;
+    margin-bottom: 1%;
+    text-align: justify;
+    line-height: 1.6;
+    color: #7e5837f1 ;
+    font-size: 1.25em;
+}
+
+                                /* INSTRUCTEURS */ 
+
+.instructeur h2 {
+    margin-left: 15.7%;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #7e5837f1;
+    font-size: 2em;
+}
+
+.profil {
+    display: flex;
+    margin-left: 15.7%;
+}
+
+.profil img {
+    width: 5% ;
+    margin-right: 20px;
+}
+
+.profil p {
+    font-size: 1.25em ;
+    color: #7e5837f1 ;
+}
+
+
+/* PAIEMENT BOUTON */
+
+.pricing-option {
+    width: 50%;
+    text-align: center ;
+    margin: auto ;
+    padding: 1%;
+}
+
+.pricing-option h2 {
+    text-align: left;
+    margin-bottom: 3%;
+    color: #7e5837f1;
+    font-size: 2em;
+}
+
+.price-option {
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #7e5837f1;
+} 
+
+.price-option input[type="radio"] {
+  margin-right:10px ; 
+}
+
+.price {
+    margin-left: auto;
+}
+
+.join-button {
+    background-color: #7e5837f1;
+    color: #02282e;
+    border: 2px solid #ffeecc;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ;
+    margin-top: 40px;
+}
+ .join-button:hover {
+    background-color: #ffeecc;
+ }
+
+ .price-option:hover {
+    background-color: #ffeecc;
+    color: black;
+ }

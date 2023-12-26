@@ -1,0 +1,118 @@
+.profil {
+    max-width: 100%;
+    border-style:double ;
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ 
+ .titre-profil {
+    margin: 2%;
+    color: #7e5837f1;
+    text-align: center;
+    align-items: center;
+    margin-left: 10%;
+ 
+ 
+ }
+ 
+ 
+ #profile-container {
+    color: #7e5837f1;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+ 
+ 
+ }
+ 
+ 
+ #profile-image {
+    border-radius: 50%;
+    width: 15%;
+    margin-left: 10%;
+ }
+ 
+ 
+ #profile-info {
+    width: 100%;
+    margin-left: 5%;
+ }
+ 
+ 
+ #profile-info span {
+    display: inline-block;
+    min-width: 100px; /* Ajout de cette propriété pour définir une largeur minimale */
+    max-width: 300px; /* Ajout de cette propriété pour définir une largeur maximale */
+    border: 1px;
+    padding: 5px;
+    margin-bottom: 5px;
+ }
+ 
+ 
+ 
+ 
+ #edit-button,
+ #save-button {
+    align-self:flex-start;
+    margin-right: 10%;
+    background-color: transparent;
+    color: #7e5837f1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+ }
+ 
+ 
+ #edit-button:hover,
+ #save-button:hover {
+    background-color: gray;
+ }
+ 
+ 
+ .profil-hr {
+    border: 0;
+    height: 0.1vw;
+    background-color: #ddd;
+    margin: 2vw ;
+ }
+ 
+ 
+ .information-programme {
+    display: flex ;
+ }
+ 
+ 
+ .programme-encours {
+    max-width: 20vw;
+    margin: 5%;
+    border-radius: 2vw;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    width: calc(50% - 20px);
+ }
+ 
+ 
+ .programme-image {
+    width: 100%;
+    display: block;
+    height: auto;
+ }
+ 
+ 
+ .programme-titre {
+    background-color: #7e5837f1;
+    text-align: center;   
+    padding: 1vw;
+ }
+ 
+ 
+ .programme-titre h3 {
+    margin-top: 10px;
+    font-size: 1.5vw;
+ 
+ 
+ }
+ 

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bodystart</title>
+
+  <link rel="shortcut icon" href="/images/logo-bodystart.png">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/membres.css">
+
+  <script type="module" src="/js/firebase-config.js"></script>
+  <script type="module" src="/js/authentification.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="/images/logo-bodystart.png" alt="logo-bodystart" class="logo-bs">
+    </div>
+        <div class="header-center">
+           
+            <div class="logo-text">
+                <a href="index.html">Bodystart</a>
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" >Accueil</a></li>
+                    <li><a href="2.quisuisje.html" >Qui suis-je ?</a></li>
+                    <li><a href="3.0.programme.html">Programmes</a></li>
+                    <li><a href="4.abonnement.html">Abonnement</a></li>
+                    <li><a href="5.transformations.html">Transformations</a></li>
+                    <li><a href="6.vossuggestions.html">Vos suggestions</a></li>
+                    <li><a href="7.membres.html" class="active">Membres (coach)</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <a href="0.1.connexion.html">
+                <button id="boutonConnexion" class="connexion-btn">Connexion</button>
+            </a>
+        </div>
+
+
+    </header>
+
+    <hr class="header-hr">
+
+    <main>
+        
+        <div class="titre-coach">
+            <h2>Trouve ton coach</h2>
+        </div>
+
+        <div class="coach-container">
+            <div class="coach-profile">
+                <img src="/images/Coach1.png" alt="Photo de Coach 1" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Jean Dupont</h3>
+                    <p>Paris, France</p>
+                    <p>Bodybuilding</p>
+                </div>
+                <button class="coach-select-btn">Choisir</button>
+            </div>
+            <div class="coach-profile">
+                <img src="/images/Coach2.png" alt="Photo de Coach 1" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Alex Moreau </h3>
+                    <p>Montpellier, France</p>
+                    <p>Bodybuilding</p>
+                </div>
+                <button class="coach-select-btn">Choisir</button>
+            </div>
+            <div class="coach-profile">
+                <img src="/images/Coach3.png" alt="Photo de Coach 1" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Emilie Dubois</h3>
+                    <p>Paris, France</p>
+                    <p>Yoga</p>
+                </div>
+                <button class="coach-select-btn">Choisir</button>
+            </div>
+            <div class="coach-profile">
+                <img src="/images/Coach4.png" alt="Photo de Coach 1" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Thomas Martin</h3>
+                    <p>Marseille, France</p>
+                    <p>Street-lifting</p>
+                </div>
+                <button class="coach-select-btn">Choisir</button>
+            </div>
+            <div class="coach-profile">
+                <img src="/images/Coach5.png" alt="Photo de Coach 1" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Claire Leroy</h3>
+                    <p>Paris, France</p>
+                    <p>Powerbuilding</p>
+                </div>
+                <button class="coach-select-btn">Choisir</button>
+            </div>
+            <div class="coach-profile">
+                <img src="/images/Coach6.png" alt="Photo de Coach 1" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Damien Roussea</h3>
+                    <p>Toulouse, France</p>
+                    <p>cross-fit</p>
+                </div>
+                <button class="coach-select-btn">Choisir</button>
+            </div>
+            
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <hr class="footer-hr">
+        <div class="footer-content">
+            <p>BODYSTART</p>
+            <P>Contacter nous: <a href="mailto:bodystartpro@gmail.com">bodystartpro@gmail.com</a></p>
+            <p>@2023 Bodystart</p>
+        </div>    
+    </footer>
+
+    <!-- BURGER -->
+
+
+
+
+   <div id="maburger" class="menu-burger">
+    <div class="burger-bouton">
+        <a href="8.1.profil.programme.html" class="bouton-profil"><button>Profil</button></a>
+        <button>Mes programmes</button>
+        <button>Gérer l'abonnement</button>
+        <button>Historique de paiement</button>
+        <button>Mes suggestions</button>
+        <button>Mon coach </button>
+        <button>FAQ</button>
+        <button>Paramètres du compte </button>
+        <button>Déconnexion</button>
+        <button class="fermer" id="fermer-burger">&times;</button>
+    </div>
+</div>
+
+
+
+
+<!-- BOUTON CHAT -->
+
+<div id="chatBox" class="chat-box">
+    <div id="chatContent"></div>
+    <form id="questionForm" onsubmit="submitQuestion(event)">
+        <input type="text" id="messageInput" placeholder="Message" />
+        <button type="submit" class="barre-message">Envoyer</button>
+    </form>
+    <span class="close-btn" onclick="toggleChatBox()">&times;</span>
+</div>
+
+<button class="chat-btn" onclick="toggleChatBox()">Une question ?</button>   
+
+
+<!-- JAVASCRIPT -->
+
+
+
+    <script src="/js/styles.js"></script>
+
+</body>
+   
+</html>

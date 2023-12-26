@@ -1,0 +1,85 @@
+.titre-programme {
+    font-size: 30px;
+    /* font-family: ''; Police d'écriture*/
+    position:relative;
+    color: #7e5837f1;
+    text-align: center;
+}
+
+.all-programme {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.programme {
+    max-width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    width: calc(50% - 20px);
+    
+}
+
+@media (max-width: 600px) {
+    .programme {
+        width: 100%;
+    }
+}
+
+.programme-image {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.programme-titre {
+    padding: 15px;
+    background-color: #7e5837f1;
+    text-align: center;
+}
+
+.programme-titre h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.programme-temps {
+    text-align: center;
+}
+
+.programme-prix {
+    text-align: center;
+    margin: 10px 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+.bouton-rejoindre {
+    background-color: #02282e;
+    color: #7e5837f1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.programme-titre a {
+    color: black;
+    text-decoration: none;
+}
+
+.bouton-rejoindre:hover {
+    background-color: #e2e2e2;
+}

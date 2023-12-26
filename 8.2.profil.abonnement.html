@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Bodystart</title>
+
+ <link rel="shortcut icon" href="/images/logo-bodystart.png">
+
+ <link rel="stylesheet" href="/css/styles.css">
+ <link rel="stylesheet" href="/css/profil.css">
+
+ <script type="module" src="/js/firebase-config.js"></script>
+ <script type="module" src="/js/authentification.js"></script>
+
+</head>
+
+<body>
+  
+   <header class="header">
+
+    <div class="header-left">
+        <img src="/images/logo-bodystart.png" alt="logo-bodystart" class="logo-bs">
+</div>
+
+       <div class="header-center">
+      
+           <div class="logo-text">
+               <a href="index.html">Bodystart</a>
+           </div>
+
+           <nav class="nav">
+               <ul>
+                   <li><a href="index.html">Accueil</a></li>
+                   <li><a href="2.quisuisje.html">Qui suis-je ?</a></li>
+                   <li><a href="3.0.programme.html">Programmes</a></li>
+                   <li><a href="4.abonnement.html">Abonnement</a></li>
+                   <li><a href="5.transformations.html">Transformations</a></li>
+                   <li><a href="6.vossuggestions.html">Vos suggestions</a></li>
+                   <li><a href="7.membres.html">Membres (coach)</a></li>
+               </ul>
+           </nav>
+
+       </div>
+
+       <div class="header-right">
+           <button id="boutonConnexion" class="connexion-btn">Connexion</button>
+       </div>
+
+   </header>
+  
+   <main>
+      
+       <div class="profil">
+           <h2 class="titre-profil">Profil</h2>
+           <div id="profile-container">
+               <img id="profile-image" src="logochat.png" alt="Photo de profil">
+               <div id="profile-info">
+                   <p>Nom : <span id="nom" contenteditable="false"></span></p>
+                   <p>Prénom : <span id="prenom" contenteditable="false"></span></p>
+                   <p>Email : <span id="email" contenteditable="false"></span></p>
+                   <p>Autre information : <span id="autre-info" contenteditable="false"></span></p>
+               </div>
+               <button id="edit-button" onclick="toggleEdit()">Modifier <span>&#9881;</span></button>
+               <button id="save-button" style="display: none;" onclick="saveChanges()">Valider</button>
+           </div>
+       </div>
+
+       <hr class="profil-hr">
+
+       <nav class="nav">
+           <ul>
+               <li><a href="8.1.profil.programme.html" >Programme(s)</a></li>
+               <li><a href="8.2.profil.abonnement.html" class="active">Abonnement</a></li>
+               <li><a href="8.3.profil.paiement.html">Historique paiement</a></li>
+               <li><a href="">Autre</a></li>
+               <li><a href="">Autre</a></li>
+           </ul>
+       </nav>
+
+       <hr class="profil-hr">
+
+   </main>
+
+   <footer class="footer">
+
+       <hr class="ligne">
+      
+       <div class="footer-content">
+           <p>BODYSTART</p>
+           <P>Contacter nous: <a href="mailto:bodystartpro@gmail.com">bodystartpro@gmail.com</a></p>
+           <p>@2023 Bodystart</p>
+       </div>   
+
+
+   </footer>
+ 
+   <!-- AUTRES -->
+ 
+   <!-- BURGER -->
+
+   <div id="maburger" class="menu-burger">
+       <div class="burger-bouton">
+           <button></a>Profil</button>
+           <button>Mes programmes</button>
+           <button>Gérer l'abonnement</button>
+           <button>Historique de paiement</button>
+           <button>Mes suggestions</button>
+           <button>Mon coach </button>
+           <button>FAQ</button>
+           <button>Paramètres du compte </button>
+           <button>Déconnexion</button>
+           <button class="fermer" id="fermer-burger">&times;</button>
+       </div>
+   </div>
+
+
+   <!-- BOUTON CHAT -->
+  
+   <div id="chatBox" class="chat-box">
+       <div id="chatContent"></div>
+       <form id="questionForm" onsubmit="submitQuestion(event)">
+           <input type="text" id="messageInput" placeholder="Message" />
+           <button type="submit" class="barre-message">Envoyer</button>
+       </form>
+       <span class="close-btn" onclick="toggleChatBox()">&times;</span>
+   </div>
+  
+   <button class="chat-btn" onclick="toggleChatBox()">Une question ?</button>   
+
+
+   <!-- JAVASCRIPT -->
+
+
+   <script src="/js/styles.js"></script>
+   <script src="/js/profil.js"></script>
+
+</body>
+
+</html>
+
+
+
+

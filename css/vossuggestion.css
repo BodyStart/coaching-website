@@ -1,0 +1,66 @@
+.suggestions-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #7e5837f1;
+    border-radius: 10px;
+  }
+  
+  .suggestions-box h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #02282e;
+  }
+  
+  .suggestions-box form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+  }
+  
+  .suggestions-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #02282e;
+  }
+  
+  .suggestions-box button {
+    padding: 10px 20px;
+    background-color: #02282e;
+    color: #7e5837f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .suggestions-box button:hover {
+    background-color: #ffeecc;
+  }
+  
+  .suggestion-list {
+    margin-top: 20px;
+  }
+  
+  /* Style pour chaque suggestion individuelle */
+  .suggestion-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .suggestion-like {
+    cursor: pointer;
+  }
+  
+  .suggestion-like.active {
+    color: #ff4500; /* ou toute autre couleur pour indiquer que l'utilisateur a "liké" */
+  }
+  

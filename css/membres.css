@@ -1,0 +1,54 @@
+.titre-coach {
+    font-size: 30px;
+    /* font-family: ''; Police d'écriture*/
+    position:relative;
+    color: #7e5837f1;
+    text-align: center;
+}
+
+.coach-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 0 15.7%;
+}
+
+.coach-profile {
+    background-color: #7e5837f1;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.coach-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.coach-info {
+    padding: 10px;
+    text-align: center;
+    color: #02282e;
+}
+
+.coach-info h3 {
+    margin-top: 0;
+}
+
+.coach-select-btn {
+    padding: 10px 20px;
+    background-color: #02282e;
+    color: #7e5837f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+}
+
+.coach-select-btn:hover {
+    background-color: #ffeecc; /* Couleur de fond du bouton au survol */
+    color: #02282e;
+}

@@ -1,0 +1,355 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    background-color:#02282e ;
+    font-family: 'Poppins', sans-serif;
+}  
+
+.ligne {
+    border: 0 ;
+    height: 4px;
+    background-color: #7e5837f1 ;
+    margin: 15px 0;
+}
+
+/* Tête de page */
+.header {
+    padding: 10px 40px;
+    text-align: center;
+    display: flex;
+}
+
+.header-left {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-bs {
+    height: 100px;
+}
+
+.header-center {
+    flex: 1 1 auto ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-right {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#maburger {
+    display: none;
+}
+
+#maburger.affiche-menu {
+    display: block;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2.5rem; /* Largeur du menu icon */
+    height: 2rem; /* Hauteur du menu icon */
+    cursor: pointer;
+    padding: 0 25px;
+}
+
+
+.menu-icon span {
+    display: block;
+    height: 2px;
+    background-color: #7e5837f1;
+}
+
+.logo-text {
+    font-size: 4.5em;
+    cursor: pointer;
+}
+
+.logo-text a {
+    text-decoration: none;
+    color: #7e5837f1;
+    transition: color 0.3s ease;
+}
+
+.logo-text a:hover {
+    color: #ffeecc;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.nav li {
+    flex: 1;
+    text-align: center;
+}
+
+.nav li a {
+    color: #7e5837f1;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.nav li a:hover, .nav li a.active {
+    color: #ffeecc;
+}
+
+.connexion-btn {
+    background-color: #7e5837f1; /* Couleur de fond du bouton */
+    border: 1px solid #fff;
+    color: #02282e;
+    padding: 15px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.connexion-btn:hover {
+    background-color: #ffeecc; /* Couleur de fond du bouton au survol */
+    color: #02282e;
+}
+
+.header-hr {
+    border: 0 ;
+    height: 1px;
+    background-color: #7e5837f1 ;
+    margin: 15px 0;
+}
+
+
+/* Bas de page*/
+
+.footer-hr {
+    border: 0 ;
+    height: 1px;
+    background-color: #7e5837f1 ;
+    margin: 15px 0;
+}
+
+.footer {
+    color: #7e5837f1 ; 
+    text-align: center ;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto ;
+}
+
+.footer-content p {
+    margin: 10px 0 ;
+
+}
+
+.footer-content a {
+    color: #7e5837f1 ; 
+    text-decoration: none ; 
+    ;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* bouton chat */
+
+.chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 18px 70px;
+    background-color: #7e5837f1;
+    color: #09282B;
+    border : none ; 
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 1000;
+    border: 1px solid #fff;
+    transition: background-color 0.3s ease;
+}
+
+.chat-btn:hover {
+    background-color: #ffeecc; /* Couleur de fond du bouton au survol */
+    color: #02282e;
+}
+
+/* BURGER OUVERTURE/FERMETURE */
+
+
+.menu-burger {
+    display: none; /* Cache la fenêtre modale par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+ }
+ 
+ 
+ 
+ 
+ /* Style pour les boutons burger */
+ .burger-bouton button,
+ .fermer {
+    display: block;
+    width: 100%;
+    padding: 1.5vw;
+    font-size: 1.6vw;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-bottom: 0.1vw solid #7e5837f1; /* Ligne de séparation entre les boutons */
+    background-color: transparent; /* Pas de couleur de fond */
+    color: #7e5837f1; /* Couleur du texte */
+    transition: background-color 0.3s ease, color 0.3s ease;
+ 
+ 
+}
+ 
+/* Effet de survol */
+ 
+.burger-bouton button:hover {
+    background-color: #7e5837f1; /* Couleur de fond au survol */
+    color: #ffffff; /* Couleur du texte au survol */
+}
+ 
+ 
+/* Effet de survol pour le bouton de fermeture */
+ 
+.fermer:hover {
+    background-color: #7e5837f1; /* Couleur de fond au survol */
+    color: #ffffff; /* Couleur du texte au survol */
+}
+  
+.bouton-profil  {
+    text-decoration:none ;
+}
+ 
+ 
+/* bouton chat */
+
+
+.chat-btn {
+    position: fixed;
+    bottom: 1vw;
+    right: 1vw;
+    padding: 0.8vw 3vw;
+    background-color: #7e5837f1;
+    color: #09282B;
+    border: none;
+    border-radius: 30vw;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 0.8vw;
+}
+  
+
+.chat-box {
+    position: fixed;
+    bottom: 3.5vw;
+    right: 1vw;
+    max-width: 20vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 0.1vw solid #7e5837f1 ;
+    border-radius: 1vw 1vw 0 0;
+    box-shadow: 0 0 1vw #7e5837f1;
+    display: none; /* Masquer la boîte de chat par défaut */
+    padding: 7% 4%;
+    overflow-y: auto;
+    max-height: 10vw; /* Hauteur maximale de la boîte de chat */
+    z-index: 1000; /* Assurez-vous que la boîte de chat apparaît au-dessus des autres éléments */  
+    word-wrap: break-word;
+  
+}
+ 
+ 
+
+.chat-box p {
+    font-size: 0.8vw;
+    color: white;
+}
+ 
+ 
+.close-btn {
+    position: sticky;
+    width: 100vw;
+    top: 0 ;
+    right: 0;
+    padding: 1vw;
+    cursor: pointer;
+    color: #fff; /* Couleur du texte */
+}
+
+
+
+.chat-box button {
+    font-size: 0.8vw;
+    background-color: #7e5837f1; /* Couleur de fond du bouton */
+    color: #09282B; /* Couleur du texte */
+    border: none;
+    padding: 0.3vw;
+    margin-top: 0.3vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+ 
+ 
+ 
+.chat-box button:hover {
+    background-color: #e8b889; /* Couleur de fond du bouton au survol */
+}
+ 
+ 
+ 
+#chatContent {
+    font-size: 0.8vw;
+    color: #fff; /* Couleur du texte dans la boîte de chat */
+}
+ 
+#chatBox.open {
+    display: block;
+}
+
+#questionForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#questionForm label {
+    margin-bottom: 0.5vw;
+}
+
+#questionForm input {
+    margin-bottom: 1vw;
+}

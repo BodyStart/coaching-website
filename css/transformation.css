@@ -1,0 +1,69 @@
+.suggestion {
+    background-color: #7e5837;
+    color: #fff;
+    padding: 50px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    align-items: center;
+}
+
+.suggestion-guillemet {
+    font-size: 15em;
+    color: #02282e;
+    text-align: center;
+}
+
+.suggestion-texte {
+    font-size: 1.25em;
+    margin-bottom: 1em;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: #02282e;;
+}
+
+.suggestion-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.suggestion-nav-button-prev {
+    color: #02282e;
+    font-size: 5em;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    background: none;
+    margin-left: 3%;
+}
+
+.suggestion-nav-button-next {
+    color: #02282e;
+    font-size: 5em;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    background: none;
+    margin-right: 3%; 
+}
+
+/* PROFIL TRANSFORMATION */
+
+.profil-transformation {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.trait {
+    font-size:50px;
+}
+
+.photo {
+    width: 40%;
+}

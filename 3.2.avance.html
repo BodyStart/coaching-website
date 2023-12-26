@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bodystart</title>
+
+  <link rel="shortcut icon" href="/images/logo-bodystart.png">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/sousprogramme.css">
+
+  <script type="module" src="/js/firebase-config.js"></script>
+  <script type="module" src="/js/authentification.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="/images/logo-bodystart.png" alt="logo-bodystart" class="logo-bs">
+    </div>
+        <div class="header-center">
+           
+            <div class="logo-text">
+                <a href="index.html">Bodystart</a>
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" >Accueil</a></li>
+                    <li><a href="2.quisuisje.html" >Qui suis-je ?</a></li>
+                    <li><a href="3.0.programme.html" class="active">Programmes</a></li>
+                    <li><a href="4.abonnement.html">Abonnement</a></li>
+                    <li><a href="5.transformations.html">Transformations</a></li>
+                    <li><a href="6.vossuggestions.html">Vos suggestions</a></li>
+                    <li><a href="7.membres.html">Membres (coach)</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <a href="0.1.connexion.html">
+                <button id="boutonConnexion" class="connexion-btn">Connexion</button>
+            </a>
+        </div>
+
+
+    </header>
+
+    <hr class="header-hr">
+    
+    <main>
+        <div class="block">
+            <div class="titre-debutant">
+                <h2>Programme de Musculation Avancé</h2>     
+            </div>       
+            <div class="temps-debutant">
+                <p>5 jours  </p> 
+                <p class="barre-vertical"> | </p> 
+                <p>4 semaines</p>   
+            </div> 
+            <div>
+              <img src="/images/Avancée.png" alt="logochat" class="debutant-image"> 
+             </div> 
+        </div>
+
+        <div class="description">
+            <h2>Description :</h2>
+            <p>Découvrez nos programmes de bodybuilding basés sur un split de 5 jours, conçus pour favoriser une croissance musculaire continue. Ce programme structuré en divisant chaque partie du corps vous permettra de cibler spécifiquement les groupes musculaires et de poursuivre votre développement physique. Il est particulièrement adapté aux personnes ayant déjà une base musculaire bien développée et qui souhaitent continuer à progresser.</p>            
+            <p>Avantages :</p>    
+            <p>- Split en 5 jours : Notre programme est organisé en séances sur 5 jours, chaque jour étant dédié à travailler un groupe musculaire spécifique pour une stimulation optimale.</p>        
+            <p>- Croissance musculaire continue : Grâce à l'approche en split, vous pourrez cibler et stimuler chaque partie du corps de manière détaillée, favorisant ainsi une croissance musculaire continue.</p>
+            <p>- Adaptation personnalisée : Chaque programme sera adapté en fonction de vos caractéristiques physiques et de vos objectifs spécifiques, pour répondre à vos besoins individuels.</p>
+            <p>- Développement musculaire : Que vous souhaitiez développer davantage votre musculature ou améliorer votre composition corporelle, ce programme vous aidera à atteindre vos objectifs.</p>
+            <p>Vous pouvez également rejoindre ce programme via l'application mobile. <a href="">Aller sur l'appli</a></p>
+        </div>
+
+        <hr class="ligne">
+
+        <div class="instructeur">
+            <h2>Instructeur(s)</h2>
+        </div>
+
+        <div class="profil">
+            <img src="logochat.png" alt="profil">
+            <p> Adam Le Charlès</p>
+        </div>
+
+        <hr class="ligne">
+
+        <div class="pricing-option">
+            <h2>Prix</h2>
+            <form>
+                <label class="price-option">
+                    <input type="radio" name="pricing" value="one-time" checked>
+                    <span class="label-text"> Paiement unique </span>
+                    <span class="price"> 5.00€ </span>
+                </label>
+
+                <label class="price-option">
+                    <input type="radio" name="pricing" value="all-inclusive">
+                    <span class="label-text"> Tout compris </span>
+                    <span class="price"> 15.00€/mois </span>
+                </label>
+
+                <button type="submit" class="join-button">Rejoindre</button>
+
+            </form>
+        </div>   
+    </main>
+
+    <footer class="footer">
+        <hr class="footer-hr">
+        <div class="footer-content">
+            <p>BODYSTART</p>
+            <P>Contacter nous: <a href="mailto:bodystartpro@gmail.com">bodystartpro@gmail.com</a></p>
+            <p>@2023 Bodystart</p>
+        </div>    
+    </footer>
+
+    <!-- BURGER -->
+
+
+
+
+   <div id="maburger" class="menu-burger">
+    <div class="burger-bouton">
+        <a href="8.1.profil.programme.html" class="bouton-profil"><button>Profil</button></a>
+        <button>Mes programmes</button>
+        <button>Gérer l'abonnement</button>
+        <button>Historique de paiement</button>
+        <button>Mes suggestions</button>
+        <button>Mon coach </button>
+        <button>FAQ</button>
+        <button>Paramètres du compte </button>
+        <button>Déconnexion</button>
+        <button class="fermer" id="fermer-burger">&times;</button>
+    </div>
+</div>
+
+
+
+
+<!-- BOUTON CHAT -->
+
+<div id="chatBox" class="chat-box">
+    <div id="chatContent"></div>
+    <form id="questionForm" onsubmit="submitQuestion(event)">
+        <input type="text" id="messageInput" placeholder="Message" />
+        <button type="submit" class="barre-message">Envoyer</button>
+    </form>
+    <span class="close-btn" onclick="toggleChatBox()">&times;</span>
+</div>
+
+<button class="chat-btn" onclick="toggleChatBox()">Une question ?</button>   
+
+
+<!-- JAVASCRIPT -->
+
+
+
+    <script src="/js/styles.js"></script>
+
+</body>
+  
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bodystart</title>
+
+  <link rel="shortcut icon" href="/images/logo-bodystart.png">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/transformation.css">
+  
+  <script type="module" src="/js/firebase-config.js"></script>
+  <script type="module" src="/js/authentification.js"></script>
+
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="/images/logo-bodystart.png" alt="logo-bodystart" class="logo-bs">
+    </div>
+        <div class="header-center">
+           
+            <div class="logo-text">
+                <a href="index.html">Bodystart</a>
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" >Accueil</a></li>
+                    <li><a href="2.quisuisje.html" >Qui suis-je ?</a></li>
+                    <li><a href="3.0.programme.html">Programmes</a></li>
+                    <li><a href="4.abonnement.html">Abonnement</a></li>
+                    <li><a href="5.transformations.html" class="active">Transformations</a></li>
+                    <li><a href="6.vossuggestions.html">Vos suggestions</a></li>
+                    <li><a href="7.membres.html">Membres (coach)</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <a href="0.1.connexion.html">
+                <button id="boutonConnexion" class="connexion-btn">Connexion</button>
+            </a>
+        </div>
+
+
+    </header>
+
+    <hr class="header-hr">
+    
+    <main>
+        <div class="suggestion">
+            <div class="suggestion-guillemet">&rdquo;</div>
+            <div class="suggestion-navigation">
+                <button class="suggestion-nav-button-prev">&lt;</button>
+                <button class="suggestion-nav-button-next">&gt;</button>
+            </div>
+            <p class="suggestion-texte">Le moyen le plus puissant de façonner nos vies est de nous amener à agir, à transformer les mots et les idées en action. Il y aura des sacrifices. Le changement nécessitera de l'inconfort. Mais nous avons choisi la voie du courage, de l'intégrité et du cœur pour surmonter le sentiment de peur, de rejet et de doute de soi.</p>
+        </div>
+        <hr class="ligne">
+        <div class="profil-transformation">
+            <div class="profil1">
+                <p>Marie Garnier, Paris</p>
+                <img class="photo" src="/images/logo-bodystart.png" alt="logochat">
+            </div>
+
+            <p class="trait"> | </p>
+
+            <div class="profil2">
+                <p>Pierre Morel, Lyon</p>
+                <img class="photo" src="logochat.png" alt="logochat">
+            </div>
+
+            <p class="trait"> | </p>
+
+            <div class="profil3">
+                <p>Anne Bain, Clichy</p>
+                <img class="photo" src="logochat.png" alt="logochat">
+            </div>
+            
+        </div>
+    </main>
+    
+
+    <footer class="footer">
+        <hr class="footer-hr">
+        <div class="footer-content">
+            <p>BODYSTART</p>
+            <P>Contacter nous: <a href="mailto:bodystartpro@gmail.com">bodystartpro@gmail.com</a></p>
+            <p>@2023 Bodystart</p>
+        </div>    
+    </footer>
+    
+    <script src="/js/transformation.js"></script>
+
+<!-- BURGER -->
+
+
+
+
+<div id="maburger" class="menu-burger">
+    <div class="burger-bouton">
+        <a href="8.1.profil.programme.html" class="bouton-profil"><button>Profil</button></a>
+        <button>Mes programmes</button>
+        <button>Gérer l'abonnement</button>
+        <button>Historique de paiement</button>
+        <button>Mes suggestions</button>
+        <button>Mon coach </button>
+        <button>FAQ</button>
+        <button>Paramètres du compte </button>
+        <button>Déconnexion</button>
+        <button class="fermer" id="fermer-burger">&times;</button>
+    </div>
+</div>
+
+
+
+
+<!-- BOUTON CHAT -->
+
+<div id="chatBox" class="chat-box">
+    <div id="chatContent"></div>
+    <form id="questionForm" onsubmit="submitQuestion(event)">
+        <input type="text" id="messageInput" placeholder="Message" />
+        <button type="submit" class="barre-message">Envoyer</button>
+    </form>
+    <span class="close-btn" onclick="toggleChatBox()">&times;</span>
+</div>
+
+<button class="chat-btn" onclick="toggleChatBox()">Une question ?</button>   
+
+
+<!-- JAVASCRIPT -->
+
+
+
+    <script src="/js/styles.js"></script>
+
+</body>
+ 
+</html>
