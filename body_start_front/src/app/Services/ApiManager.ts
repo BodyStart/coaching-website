@@ -12,9 +12,8 @@ export class ApiManagerService {
   }
 
 
-  exerciseIndex(page: number): Observable<any[]> {
-    const options = {params: {page: page.toString()}};
-    return this.http.get<any[]>(`${this.urlAdmin}exercises`, options);
+  exerciseIndex(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.urlAdmin}exercises`);
   }
 
   addExercise(ExerciseData: any): Observable<any> {

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ApiManagerService} from "../../Services/ApiManager";
 import {Observable} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-exercise_index',
@@ -8,12 +9,27 @@ import {Observable} from "rxjs";
   styleUrls: ['./exercise.component.css']
 })
 export class ExerciseComponent implements OnInit {
-  exercise: Observable<any> | undefined
+  exercises: Observable<any> | undefined
 
-  constructor(private api: ApiManagerService) {
+  constructor(private api: ApiManagerService,  private router: Router) {
   }
 
   ngOnInit() {
-    this.exercise = this.api.exerciseIndex(1);
+    this.exercises = this.api.exerciseIndex();
+    console.log(this.exercises)
+  }
+
+  onDelete(id: number) {
+    const isConfirmed = window.confirm('Are you sure you want to delete this employee?');
+    if (isConfirmed) {
+      this.api.deleteExercise(id).subscribe(
+        data => {
+          this.router.navigateByUrl('/admin/exercise');
+        },
+        error => {
+          console.error('Error deleting category:', error);
+        }
+      );
+    }
   }
 }

@@ -10,6 +10,10 @@ import { SubcriptionComponent } from './Customer/subcription/subcription.compone
 import { LoginComponent } from './Auth/login/login.component';
 import { RegisterComponent } from './Auth/register/register.component';
 import { ExerciseComponent } from './Admin/exercise_index/exercise.component';
+import { HeaderComponent } from './header/header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,11 +24,16 @@ import { ExerciseComponent } from './Admin/exercise_index/exercise.component';
     SubcriptionComponent,
     LoginComponent,
     RegisterComponent,
-    ExerciseComponent
+    ExerciseComponent,
+    HeaderComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
