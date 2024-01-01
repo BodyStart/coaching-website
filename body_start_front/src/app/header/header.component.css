@@ -19,6 +19,13 @@ body {
   padding: 0 20px;
 }
 
+.header-right {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
 .logo-bs {
   height: 100px;
 }
@@ -78,4 +85,26 @@ body {
 
 .nav li a:hover, .nav li a.active {
   color: #ffeecc;
+}
+
+.connexion-btn {
+  background-color: #7e5837f1; /* Couleur de fond du bouton */
+  border: 1px solid #fff;
+  color: #02282e;
+  padding: 15px 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.connexion-btn:hover {
+  background-color: #ffeecc;
+  color: #02282e;
+}
+
+.header-hr {
+  border: 0 ;
+  height: 1px;
+  background-color: #7e5837f1 ;
+  margin: 15px 0;
 }
