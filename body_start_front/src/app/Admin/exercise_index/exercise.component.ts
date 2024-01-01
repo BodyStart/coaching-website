@@ -16,7 +16,6 @@ export class ExerciseComponent implements OnInit {
 
   ngOnInit() {
     this.exercises = this.api.exerciseIndex();
-    console.log(this.exercises)
   }
 
   onDelete(id: number) {

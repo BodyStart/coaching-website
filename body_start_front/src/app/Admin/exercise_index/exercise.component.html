@@ -15,7 +15,10 @@
   <tbody class="text-center">
   <tr *ngFor="let exercise of exercises | async">
     <td>{{ exercise.id }}</td>
-    <td>{{ exercise.name }}</td>
+    <td>{{ exercise.title }}</td>
+    <td>{{ exercise.serie }}</td>
+    <td>{{ exercise.reps }}</td>
+    <td>{{ exercise.restTime }}</td>
     <td colspan="2">
       <a routerLink="/admin/exercise/{{ exercise.id }}" class="btn btn-primary">Edit</a>
       <button (click)="onDelete(exercise.id)" class="btn btn-danger">Supprimer</button>

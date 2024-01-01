@@ -11,7 +11,7 @@ export class AuthentificationService {
 
   urlAdmin: string = "http://localhost:8000/"
 
-  login(formData: object) {
+  loggin(formData: object) {
     return this.http.post(`${this.urlAdmin}api/login_check`, formData);
   }
 

@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {AuthentificationService} from "./AuthManager";
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +9,20 @@ import {Observable} from "rxjs";
 export class ApiManagerService {
   urlAdmin: string = "http://localhost:8000/api/"
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private auth: AuthentificationService) {
   }
+
+  token = this.auth.getToken();
+  headers = new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${(this.token)}`
+  });
+
+   requestOptions = { headers: this.headers };
 
 
   exerciseIndex(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.urlAdmin}exercises`);
+    return this.http.get<any[]>(`${this.urlAdmin}exercises`, this.requestOptions);
   }
 
   addExercise(ExerciseData: any): Observable<any> {
