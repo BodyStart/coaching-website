@@ -5,7 +5,6 @@ body {
 }
 
 .header {
-  padding: 10px 40px;
   text-align: center;
   display: flex;
   background-color:#02282e !important;
@@ -79,8 +78,7 @@ body {
   text-decoration: none;
   padding: 10px;
   transition: color 0.3s ease;
-  padding: 20px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .nav li a:hover, .nav li a.active {

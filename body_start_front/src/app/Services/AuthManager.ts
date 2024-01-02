@@ -11,9 +11,13 @@ export class AuthentificationService {
 
   urlAdmin: string = "http://localhost:8000/"
 
-  loggin(formData: object) {
+  login(formData: object) {
     return this.http.post(`${this.urlAdmin}api/login_check`, formData);
   }
+  logout(formData: object) {
+    return this.http.post(`${this.urlAdmin}api/logout`, formData);
+  }
+
 
   setRoles(roles: string[]): void {
     localStorage.setItem('userRoles', JSON.stringify(roles));
