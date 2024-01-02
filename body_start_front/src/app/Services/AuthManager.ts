@@ -11,6 +11,10 @@ export class AuthentificationService {
 
   urlAdmin: string = "http://localhost:8000/"
 
+  register(formData: object) {
+    return this.http.post(`${this.urlAdmin}api/register`, formData);
+  }
+
   login(formData: object) {
     return this.http.post(`${this.urlAdmin}api/login_check`, formData);
   }

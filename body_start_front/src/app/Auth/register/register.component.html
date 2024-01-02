@@ -1,4 +1,4 @@
-<section class="vh-100" style="background-color: #eee;">
+<section class="vh-100 mb-5">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-11">
@@ -9,59 +9,73 @@
 
                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Inscription</p>
 
-                <form class="mx-1 mx-md-4">
+                <form class="mx-1 mx-md-4" [formGroup]="formData" (ngSubmit)="onSubmit()">
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-
                       <label class="form-label">Nom</label>
+                      <input type="text" name="lastName" formControlName="last_name" class="form-control">
                     </div>
                   </div>
+                  <div *ngIf="isSubmitted && formData.controls['last_name'].errors?.['required']" class="error-message">
+                    Champs obligatoire
+                  </div>
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label class="form-label">Prénom</label>
+                      <input type="text" name="firstName" formControlName="first_name" class="form-control">
                     </div>
                   </div>
-
+                  <div *ngIf="isSubmitted && formData.controls['first_name'].errors?.['required']" class="error-message">
+                    Champs
+                    obligatoire
+                  </div>
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-calendar fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label class="form-label">Date de Naissance</label>
-                      <input type="date" id="birthdate" name="birthdate" class="form-control">
+                      <input type="date" id="dateBirth" name="dateBirth" formControlName="date_birth"
+                             class="form-control">
                     </div>
                   </div>
-
+                  <div *ngIf="isSubmitted && formData.controls['date_birth'].errors?.['required']" class="error-message">
+                    Champs
+                    obligatoire
+                  </div>
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label class="form-label">Email</label>
+                      <input type="email" name="email" formControlName="email" class="form-control">
                     </div>
                   </div>
-
+                  <div *ngIf="isSubmitted && formData.controls['email'].errors?.['required']" class="error-message">
+                    Champs
+                    obligatoire
+                  </div>
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label class="form-label">Mot de passe</label>
+                      <input type="password" formControlName="password" name="password" class="form-control"/>
                     </div>
+                  </div>
+                  <div *ngIf="isSubmitted && formData.controls['password'].errors?.['required']" class="error-message">Champs
+                    obligatoire
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="gender">Gender</label>
-                      <select name="gender" id="gender">
+                      <label class="form-label" for="gender">Genre</label>
+                      <select name="gender" class="custom-select" formControlName="gender" id="gender">
+                        <option value="" disabled selected>Choisissez votre genre</option>
                         <option value="male">Homme</option>
-                        <option value="gender">Femme</option>
+                        <option value="female">Femme</option>
                       </select>
                     </div>
                   </div>
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label class="form-label" for="level">Niveau</label>
-                      <select name="level" id="level">
+                      <select name="level" formControlName="level" id="level">
+                        <option value="" disabled selected>Choisissez votre niveau</option>
                         <option value="beginner">Débutant</option>
                         <option value="middle">Intérmédiaire</option>
                         <option value="pro">Pro</option>
@@ -69,12 +83,12 @@
                     </div>
                   </div>
 
-<!--                  <div *ngIf="loginError" class="error-message">-->
-<!--                    {{ loginError }}-->
-<!--                  </div>-->
+                  <div *ngIf="loginError" class="error-message">
+                    {{ loginError }}
+                  </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="button" class="btn btn-primary btn-lg">S'inscrire</button>
+                    <button type="submit" class="btn btn-primary btn-lg">S'inscrire</button>
                   </div>
 
                 </form>
