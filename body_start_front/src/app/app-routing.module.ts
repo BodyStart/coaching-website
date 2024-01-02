@@ -28,7 +28,7 @@ const routes: Routes = [
     path:"program", component: ProgramComponent,
   },
   {
-    path:"subcription", component: SubcriptionComponent,
+    path:"subscription", component: SubcriptionComponent,
   }
 ];
 
