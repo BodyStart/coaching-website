@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { ResetPasswordComponent } from './Auth/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {HttpClientModule} from "@angular/common/http";
     LoginComponent,
     RegisterComponent,
     ExerciseComponent,
-    HeaderComponent
+    HeaderComponent,
+    ResetPasswordComponent
   ],
   imports: [
     HttpClientModule,

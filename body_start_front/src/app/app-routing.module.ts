@@ -7,6 +7,7 @@ import {HomeComponent} from "./Customer/home/home.component";
 import {ProgramComponent} from "./Customer/program/program.component";
 import {SubcriptionComponent} from "./Customer/subcription/subcription.component";
 import {RegisterComponent} from "./Auth/register/register.component";
+import {ResetPasswordComponent} from "./Auth/reset-password/reset-password.component";
 
 const routes: Routes = [
   {
@@ -29,6 +30,9 @@ const routes: Routes = [
   },
   {
     path:"subscription", component: SubcriptionComponent,
+  },
+  {
+    path:"reset/password", component: ResetPasswordComponent,
   }
 ];
 
