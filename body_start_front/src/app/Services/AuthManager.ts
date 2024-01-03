@@ -20,7 +20,7 @@ export class AuthentificationService {
   }
 
   passwordResetRequest(formData: object) {
-    return this.http.post(`${this.urlAdmin}/v2-api/password/reset/request`, formData);
+    return this.http.post(`${this.urlAdmin}v2-api/password/reset/request`, formData);
   }
 
   logout(formData: object) {

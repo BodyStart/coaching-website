@@ -8,6 +8,7 @@ import {ProgramComponent} from "./Customer/program/program.component";
 import {SubcriptionComponent} from "./Customer/subcription/subcription.component";
 import {RegisterComponent} from "./Auth/register/register.component";
 import {ResetPasswordComponent} from "./Auth/reset-password/reset-password.component";
+import {ResetRequestPasswordComponent} from "./Auth/reset-request-password/reset-request-password.component";
 
 const routes: Routes = [
   {
@@ -33,6 +34,9 @@ const routes: Routes = [
   },
   {
     path:"reset/password", component: ResetPasswordComponent,
+  },
+  {
+    path:"reset/request", component: ResetRequestPasswordComponent,
   }
 ];
 

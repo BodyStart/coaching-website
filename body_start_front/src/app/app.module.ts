@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { ResetPasswordComponent } from './Auth/reset-password/reset-password.component';
+import { ResetRequestPasswordComponent } from './Auth/reset-request-password/reset-request-password.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ResetPasswordComponent } from './Auth/reset-password/reset-password.com
     RegisterComponent,
     ExerciseComponent,
     HeaderComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    ResetRequestPasswordComponent
   ],
   imports: [
     HttpClientModule,
