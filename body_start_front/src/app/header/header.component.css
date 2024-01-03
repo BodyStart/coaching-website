@@ -1,0 +1,108 @@
+body {
+  margin: 0 auto;
+  background-color: #02282e !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  background-color:#02282e !important;
+}
+
+.header-left {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-right {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.logo-bs {
+  height: 100px;
+}
+
+.header-center {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header-right {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 4.5em;
+  cursor: pointer;
+}
+
+.logo-text a {
+  text-decoration: none;
+  color: #7e5837f1;
+  transition: color 0.3s ease;
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.nav li {
+  flex: 1;
+  text-align: center;
+}
+
+.nav li a {
+  color: #7e5837f1;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+  font-size: 18px;
+}
+
+.nav li a:hover, .nav li a.active {
+  color: #ffeecc;
+}
+
+.connexion-btn {
+  background-color: #7e5837f1; /* Couleur de fond du bouton */
+  border: 1px solid #fff;
+  color: #02282e;
+  padding: 15px 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.connexion-btn:hover {
+  background-color: #ffeecc;
+  color: #02282e;
+}
+
+.header-hr {
+  border: 0 ;
+  height: 1px;
+  background-color: #7e5837f1 ;
+  margin: 15px 0;
+}
