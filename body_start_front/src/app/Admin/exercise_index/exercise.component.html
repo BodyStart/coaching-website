@@ -1,0 +1,28 @@
+<div>
+  <a routerLink="/category/new" class="btn btn-success">Ajouter un nouvel exercice</a>
+</div>
+<table class="table table-striped">
+  <thead class="text-center">
+  <tr>
+    <th scope="col">N°</th>
+    <th scope="col">Nom</th>
+    <th scope="col">Série</th>
+    <th scope="col">Répetitions</th>
+    <th scope="col">Temps de repos</th>
+    <th scope="col">Actions</th>
+  </tr>
+  </thead>
+  <tbody class="text-center">
+  <tr *ngFor="let exercise of exercises | async">
+    <td>{{ exercise.id }}</td>
+    <td>{{ exercise.title }}</td>
+    <td>{{ exercise.serie }}</td>
+    <td>{{ exercise.reps }}</td>
+    <td>{{ exercise.restTime }}</td>
+    <td colspan="2">
+      <a routerLink="/admin/exercise/{{ exercise.id }}" class="btn btn-primary">Edit</a>
+      <button (click)="onDelete(exercise.id)" class="btn btn-danger">Supprimer</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
