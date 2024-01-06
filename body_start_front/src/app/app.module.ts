@@ -16,6 +16,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { ResetPasswordComponent } from './Auth/reset-password/reset-password.component';
 import { ResetRequestPasswordComponent } from './Auth/reset-request-password/reset-request-password.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ResetRequestPasswordComponent } from './Auth/reset-request-password/res
     ExerciseComponent,
     HeaderComponent,
     ResetPasswordComponent,
-    ResetRequestPasswordComponent
+    ResetRequestPasswordComponent,
+    FooterComponent
   ],
   imports: [
     HttpClientModule,

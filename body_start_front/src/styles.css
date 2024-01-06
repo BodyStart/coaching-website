@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+body {
   font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
+  background-color: #182024 !important;
 }
 
 
-.error-message{
+.error-message {
   color: red;
   font-weight: bold;
 }
