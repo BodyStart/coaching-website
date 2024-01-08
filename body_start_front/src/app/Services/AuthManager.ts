@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +23,13 @@ export class AuthentificationService {
     return this.http.post(`${this.urlAdmin}v2-api/password/reset/request`, formData);
   }
 
-  logout(formData: object) {
-    return this.http.post(`${this.urlAdmin}api/logout`, formData);
+  logout(email: string, token: string) {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    const options = {headers: headers};
+
+    return this.http.post(`${this.urlAdmin}api/logout`, {email}, options);
   }
 
 
@@ -43,7 +48,7 @@ export class AuthentificationService {
   }
 
   setToken(token: string) {
-    localStorage.setItem('token', JSON.stringify(token));
+    localStorage.setItem('token', token);
   }
 
   getToken(): string | null {
@@ -53,5 +58,18 @@ export class AuthentificationService {
 
   removeToken() {
     localStorage.removeItem('token');
+  }
+
+  setEmail(email: string) {
+    localStorage.setItem('email', email);
+  }
+
+  getEmail(): string | null {
+    const storedEmail = localStorage.getItem('email');
+    return storedEmail ? JSON.parse(storedEmail) : null;
+  }
+
+  removeEmail() {
+    localStorage.removeItem('email');
   }
 }
