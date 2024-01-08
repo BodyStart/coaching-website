@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
           if (response.roles) {
             this.authService.setRoles(response.roles);
             this.authService.setToken(response.token);
+            this.authService.setEmail(response.username);
           }
           if (this.authService.hasRole('ROLE_ADMIN') && this.isSubmitted) {
             this.router.navigate(['/admin/exercises']);

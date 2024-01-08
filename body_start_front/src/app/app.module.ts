@@ -14,6 +14,12 @@ import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { ResetPasswordComponent } from './Auth/reset-password/reset-password.component';
+import { ResetRequestPasswordComponent } from './Auth/reset-request-password/reset-request-password.component';
+import { FooterComponent } from './footer/footer.component';
+import { TransformationComponent } from './Customer/transformation/transformation.component';
+import { SuggestionsComponent } from './Customer/suggestions/suggestions.component';
+import { CoachComponent } from './Customer/coach/coach.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +31,13 @@ import {HttpClientModule} from "@angular/common/http";
     LoginComponent,
     RegisterComponent,
     ExerciseComponent,
-    HeaderComponent
+    HeaderComponent,
+    ResetPasswordComponent,
+    ResetRequestPasswordComponent,
+    FooterComponent,
+    TransformationComponent,
+    SuggestionsComponent,
+    CoachComponent
   ],
   imports: [
     HttpClientModule,

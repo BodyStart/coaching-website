@@ -1,13 +1,6 @@
-body {
-  margin: 0 auto;
-  background-color: #02282e !important;
-  font-family: 'Poppins', sans-serif;
-}
-
 .header {
   text-align: center;
   display: flex;
-  background-color:#02282e !important;
 }
 
 .header-left {

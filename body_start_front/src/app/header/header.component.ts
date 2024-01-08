@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {AuthentificationService} from "../Services/AuthManager";
 
 @Component({
   selector: 'app-header',
@@ -7,24 +8,27 @@ import {Router} from "@angular/router";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  token: boolean = false
+  token!: string;
+  email!: string;
 
-  constructor(private route: Router) {
+  constructor(private route: Router, private auth: AuthentificationService) {
   }
 
   ngOnInit() {
-    if (localStorage.getItem('token')) {
-      this.token = true
-    }
+    this.email = localStorage.getItem('email') ?? '';
+    this.token = localStorage.getItem('token') ?? '';
   }
 
   logout() {
-    const token = localStorage.getItem('token')
-    if (token) {
-      localStorage.removeItem('token');
-      localStorage.removeItem('userRoles');
-      this.route.navigateByUrl('/login')
-    }
-
+    this.auth.logout(this.email, this.token).subscribe((response: any) => {
+      if (this.token) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('userRoles');
+        localStorage.removeItem('email');
+        this.route.navigateByUrl('/login')
+      }
+    }, (error) => {
+      console.error('Erreur d\'authentification :', error);
+    });
   }
 }
