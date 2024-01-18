@@ -37,11 +37,16 @@
               {{ loginError }}
             </div>
 
-            <button type="submit" class="btn btn-primary btn-block mb-4">Connexion</button>
-            <div>
-              <a class="btn btn-success" routerLink="/register">Inscription</a>
+            <div class="d-flex justify-content-start">
+              <button type="submit" class="btn btn-primary btn-block mb-4">Connexion</button>
             </div>
           </form>
+          <div class="d-flex justify-content-around">
+            <button type="button" class="login-with-google-btn">
+              Connexion avec Google
+            </button>
+            <a class="btn btn-success" routerLink="/register">Inscription</a>
+          </div>
         </div>
       </div>
     </div>

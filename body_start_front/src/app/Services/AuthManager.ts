@@ -23,7 +23,7 @@ export class AuthentificationService {
     return this.http.post(`${this.urlAdmin}v2-api/password/reset/request`, formData);
   }
 
-  logout(email: string, token: string) {
+  logout(email: string | undefined, token: string | undefined) {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });

@@ -10,6 +10,7 @@ import {AuthentificationService} from "../Services/AuthManager";
 export class HeaderComponent implements OnInit {
   token!: string;
   email!: string;
+  loggedIn!: boolean;
 
   constructor(private route: Router, private auth: AuthentificationService) {
   }
@@ -18,6 +19,7 @@ export class HeaderComponent implements OnInit {
     this.email = localStorage.getItem('email') ?? '';
     this.token = localStorage.getItem('token') ?? '';
   }
+
 
   logout() {
     this.auth.logout(this.email, this.token).subscribe((response: any) => {

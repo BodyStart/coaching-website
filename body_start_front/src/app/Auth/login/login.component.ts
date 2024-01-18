@@ -33,9 +33,9 @@ export class LoginComponent implements OnInit {
             this.authService.setEmail(response.username);
           }
           if (this.authService.hasRole('ROLE_ADMIN') && this.isSubmitted) {
-            this.router.navigate(['/admin/exercises']);
+            this.router.navigateByUrl('/admin/exercises');
           } else {
-            alert('gg')
+            this.router.navigateByUrl('/program');
           }
         },
         (error) => {
