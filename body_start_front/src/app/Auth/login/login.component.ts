@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthentificationService} from "../../Services/AuthManager";
 import {Router} from "@angular/router";
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +14,10 @@ export class LoginComponent implements OnInit {
   formData!: FormGroup
   isSubmitted: boolean = false
 
-  constructor(private authService: AuthentificationService, private router: Router, private formBuilder: FormBuilder) {
+  constructor(private authService: AuthentificationService,
+              private router: Router,
+              private formBuilder: FormBuilder
+  ) {
   }
 
   ngOnInit() {
@@ -21,7 +25,9 @@ export class LoginComponent implements OnInit {
       email: [null, [Validators.required, Validators.email]],
       password: [null, [Validators.required, Validators.minLength(8)]]
     })
+
   }
+
 
   login() {
     if (this.formData.valid) {
@@ -35,7 +41,9 @@ export class LoginComponent implements OnInit {
           if (this.authService.hasRole('ROLE_ADMIN') && this.isSubmitted) {
             this.router.navigateByUrl('/admin/exercises');
           } else {
-            this.router.navigateByUrl('/program');
+            this.router.navigateByUrl('/user/profil').then(() => {
+              window.location.reload();
+            });
           }
         },
         (error) => {

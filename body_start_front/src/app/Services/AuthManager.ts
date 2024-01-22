@@ -32,6 +32,9 @@ export class AuthentificationService {
     return this.http.post(`${this.urlAdmin}api/logout`, {email}, options);
   }
 
+  googleAuth(){
+    return this.http.get(`${this.urlAdmin}login/google`);
+  }
 
   setRoles(roles: string[]): void {
     localStorage.setItem('userRoles', JSON.stringify(roles));

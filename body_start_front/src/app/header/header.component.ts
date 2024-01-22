@@ -27,7 +27,9 @@ export class HeaderComponent implements OnInit {
         localStorage.removeItem('token');
         localStorage.removeItem('userRoles');
         localStorage.removeItem('email');
-        this.route.navigateByUrl('/login')
+        this.route.navigateByUrl('/login').then(() => {
+          window.location.reload();
+        });
       }
     }, (error) => {
       console.error('Erreur d\'authentification :', error);
