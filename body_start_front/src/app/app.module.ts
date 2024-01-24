@@ -20,7 +20,10 @@ import { FooterComponent } from './footer/footer.component';
 import { TransformationComponent } from './Customer/transformation/transformation.component';
 import { SuggestionsComponent } from './Customer/suggestions/suggestions.component';
 import { CoachComponent } from './Customer/coach/coach.component';
-
+import {SocialLoginModule, SocialAuthServiceConfig, GoogleSigninButtonModule} from '@abacritt/angularx-social-login';
+import {
+  GoogleLoginProvider
+} from '@abacritt/angularx-social-login';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,9 +48,29 @@ import { CoachComponent } from './Customer/coach/coach.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SocialLoginModule,
+    GoogleSigninButtonModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '461139887721-07fobnv5hemp6jisp54j06qenktsgkmu.apps.googleusercontent.com'
+            )
+          },
+        ],
+        onError: (err) => {
+          console.error(err);
+        }
+      } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

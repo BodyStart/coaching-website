@@ -23,6 +23,10 @@ export class AuthentificationService {
     return this.http.post(`${this.urlAdmin}v2-api/password/reset/request`, formData);
   }
 
+  googleAuth(user: object) {
+    return this.http.post(`${this.urlAdmin}login/google/auth`, user);
+  }
+
   logout(email: string, token: string) {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
@@ -71,5 +75,9 @@ export class AuthentificationService {
 
   removeEmail() {
     localStorage.removeItem('email');
+  }
+
+  setUser(user: object) {
+    localStorage.setItem('user', JSON.stringify(user));
   }
 }

@@ -23,7 +23,7 @@
   </div>
 
   <div class="header-right" id="headerRight">
-    <ng-container *ngIf="!token; else loggedIn">
+    <ng-container *ngIf="!token && !user; else loggedIn">
       <a routerLink="/login" class="nav-link">
         <button id="boutonConnexion" class="connexion-btn">Connexion</button>
       </a>
