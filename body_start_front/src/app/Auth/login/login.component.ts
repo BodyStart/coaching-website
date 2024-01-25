@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit {
       this.authService.setUser(user)
 
       if (this.user) {
-        // Envoyez les informations de l'utilisateur à votre API Symfony
         this.authService.googleAuth(this.user).subscribe(
           (response) => {
             console.log('Authentification réussie avec Google', response);
@@ -40,7 +39,7 @@ export class LoginComponent implements OnInit {
             console.error('Erreur d\'authentification avec Google', error);
           }
         );
-        this.router.navigate(['/']).then(() => {
+        this.router.navigate(['/user/profil']).then(() => {
           window.location.reload();
         });
       }
@@ -57,8 +56,14 @@ export class LoginComponent implements OnInit {
             this.authService.setEmail(response.username);
           }
           if (this.authService.hasRole('ROLE_ADMIN') && this.isSubmitted) {
-            this.router.navigate(['/admin/exercises']);
+            this.router.navigate(['/user/profil']).then(() => {
+              window.location.reload();
+            });
+            ;
           } else {
+            this.router.navigate(['/user/profil']).then(() => {
+              window.location.reload();
+            });
           }
         },
         (error) => {

@@ -12,6 +12,8 @@ import {ResetRequestPasswordComponent} from "./Auth/reset-request-password/reset
 import {SuggestionsComponent} from "./Customer/suggestions/suggestions.component";
 import {CoachComponent} from "./Customer/coach/coach.component";
 import {TransformationComponent} from "./Customer/transformation/transformation.component";
+import {ProfilComponent} from "./Customer/profil/profil.component";
+import {PageErrorComponent} from "./page-error/page-error.component";
 
 const routes: Routes = [
   {
@@ -42,6 +44,9 @@ const routes: Routes = [
     path:"suggestions", component: SuggestionsComponent,
   },
   {
+    path:"user/profil", component: ProfilComponent,
+  },
+  {
     path:"coach", component: CoachComponent,
   },
   {
@@ -52,7 +57,10 @@ const routes: Routes = [
   },
   {
     path:"reset/request", component: ResetRequestPasswordComponent,
-  }
+  },
+  {
+    path:"error", component: PageErrorComponent,
+  },
 ];
 
 @NgModule({
