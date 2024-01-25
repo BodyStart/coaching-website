@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   email: any;
   user: any
   emailUser: string | null = null;
+  tokenUser: string | null = null;
   constructor(private route: Router, private auth: AuthentificationService, private authService: SocialAuthService) {
   }
 
@@ -23,13 +24,15 @@ export class HeaderComponent implements OnInit {
     const parseUser = JSON.parse(this.user);
     if (parseUser){
       this.emailUser = parseUser.email;
+      this.tokenUser = parseUser.idToken;
     }
 
   }
 
   logout() {
-    if (!this.email && this.emailUser) {
+    if (!this.email && this.emailUser && !this.token && this.tokenUser) {
       this.email = this.emailUser;
+      this.token = this.tokenUser;
     }
     this.auth.logout(this.email, this.token).subscribe((response: any) => {
       if (this.token) {

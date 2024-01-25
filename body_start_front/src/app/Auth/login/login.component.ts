@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthentificationService} from "../../Services/AuthManager";
 import {Router} from "@angular/router";
@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit {
   isSubmitted: boolean = false
   user: any
   loggedIn: any
-  @ViewChild('googleSignInBtn') googleSignInBtn: any; // Assurez-vous que le type est correct
 
   constructor(private authService: AuthentificationService, private router: Router, private formBuilder: FormBuilder, private socialService: SocialAuthService) {
   }
@@ -32,36 +31,20 @@ export class LoginComponent implements OnInit {
       this.authService.setUser(user)
 
       if (this.user) {
+        // Envoyez les informations de l'utilisateur à votre API Symfony
+        this.authService.googleAuth(this.user).subscribe(
+          (response) => {
+            console.log('Authentification réussie avec Google', response);
+          },
+          (error) => {
+            console.error('Erreur d\'authentification avec Google', error);
+          }
+        );
         this.router.navigate(['/']).then(() => {
           window.location.reload();
         });
       }
     })
-  }
-
-  ngAfterViewInit() {
-    this.googleSignInBtn.signInObs.subscribe(() => {
-      this.googleAuth();
-    });
-  }
-
-
-  googleAuth() {
-    if (this.user) {
-      this.authService.setUser(this.user);
-
-      // Envoyez les informations de l'utilisateur à votre API Symfony
-      this.authService.googleAuth(this.user).subscribe(
-        (response) => {
-          console.log('Authentification réussie avec Google', response);
-          // Gérez la réponse de votre API ici
-        },
-        (error) => {
-          console.error('Erreur d\'authentification avec Google', error);
-          // Gérez les erreurs ici
-        }
-      );
-    }
   }
 
   login() {
