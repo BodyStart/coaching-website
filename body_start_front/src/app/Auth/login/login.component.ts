@@ -34,14 +34,14 @@ export class LoginComponent implements OnInit {
         this.authService.googleAuth(this.user).subscribe(
           (response) => {
             console.log('Authentification réussie avec Google', response);
+            this.router.navigate(['/user/profil']).then(() => {
+              window.location.reload();
+            });
           },
           (error) => {
             console.error('Erreur d\'authentification avec Google', error);
           }
         );
-        this.router.navigate(['/user/profil']).then(() => {
-          window.location.reload();
-        });
       }
     })
   }
@@ -59,7 +59,6 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['/user/profil']).then(() => {
               window.location.reload();
             });
-            ;
           } else {
             this.router.navigate(['/user/profil']).then(() => {
               window.location.reload();

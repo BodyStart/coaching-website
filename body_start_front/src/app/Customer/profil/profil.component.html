@@ -2,11 +2,11 @@
     <div class="card">
       <h2 class="text-dark">Profil</h2>
       <div>
-        <img src="./assets/images/avatar.jpg" class="w-25 h-25" alt="Photo de profil">
+        <img src="{{user.photoUrl}}" class="w-25 h-25" alt="Photo de profil">
         <div>
-          <p class="text-dark">Nom : <span id="nom" ></span></p>
-          <p class="text-dark">Prénom : <span id="prenom" ></span></p>
-          <p class="text-dark">Email : <span id="email" ></span></p>
+          <p class="text-dark">Nom : <span id="nom" >{{user.lastName}}</span></p>
+          <p class="text-dark">Prénom : <span id="prenom" >{{user.firstName}}</span></p>
+          <p class="text-dark">Email : <span id="email" >{{user.email}}</span></p>
           <p class="text-dark">Autre information : <span id="autre-info" ></span></p>
         </div>
         <button id="edit-button">Modifier <span>&#9881;</span></button>
