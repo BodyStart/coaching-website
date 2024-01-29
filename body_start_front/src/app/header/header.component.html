@@ -23,7 +23,7 @@
   </div>
 
   <div class="header-right" id="headerRight">
-    <ng-container *ngIf="!token; else loggedIn">
+    <ng-container *ngIf="!token && !user; else loggedIn">
       <a routerLink="/login" class="nav-link">
         <button id="boutonConnexion" class="connexion-btn">Connexion</button>
       </a>
@@ -31,7 +31,8 @@
     <ng-template #loggedIn>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <button class="connexion-btn btn btn-link nav-link" (click)="logout()">Déconnexion</button>
+<!--          <button class="connexion-btn btn btn-link nav-link" (click)="logout()">Déconnexion</button>-->
+          <button class="connexion-btn btn btn-link nav-link" (click)="logoutGoogle()">logoutGoogle</button>
         </li>
       </ul>
     </ng-template>
