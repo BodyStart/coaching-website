@@ -32,6 +32,7 @@
     display: flex;
     justify-content: center; /* alignement horizontal */
     gap: 100px;
+    flex-wrap: wrap;
 }
 
 .programme {
@@ -42,7 +43,7 @@
     box-sizing: border-box;
     margin-bottom: 20px;
     width: calc(50% - 20px);
-    
+
 }
 
 @media (max-width: 600px) {
@@ -111,4 +112,28 @@
     line-height: 1.6;
     color: #7e5837f1 ;
     font-size: 1.25em;
+}
+
+@media screen and (max-width: 1100px) {
+  .section-titre h2 {
+    font-size: 3em;
+}
+.section-présentation h3 {
+  margin-left: 0px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #7e5837f1;
+  font-size: 1.5em;
+}
+.section-présentation p {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px 20px;
+  margin-bottom: 15px;
+  text-align: justify;
+  line-height: 1.6;
+  color: #7e5837f1;
+  font-size: 1em;
+  text-align: center;
+}
 }

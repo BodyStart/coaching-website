@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
@@ -6,7 +8,16 @@ body {
     margin: 0 auto;
     background-color:#02282e ;
     font-family: 'Poppins', sans-serif;
-}  
+}
+
+/* Color Palette */
+:root {
+  --primary-color: #003366;
+  --secondary-color: #FF6600;
+  --accent-color-1: #708090;
+  --accent-color-2: #F5F5F5;
+  --accent-color-3: #C0C0C0;
+}
 
 .ligne {
     border: 0 ;
@@ -153,7 +164,7 @@ body {
 }
 
 .footer {
-    color: #7e5837f1 ; 
+    color: #7e5837f1 ;
     text-align: center ;
     padding: 20px 0;
 }
@@ -169,8 +180,8 @@ body {
 }
 
 .footer-content a {
-    color: #7e5837f1 ; 
-    text-decoration: none ; 
+    color: #7e5837f1 ;
+    text-decoration: none ;
     ;
 }
 
@@ -187,7 +198,7 @@ body {
     padding: 18px 70px;
     background-color: #7e5837f1;
     color: #09282B;
-    border : none ; 
+    border : none ;
     border-radius: 30px;
     cursor: pointer;
     z-index: 1000;
@@ -212,10 +223,10 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
  }
- 
- 
- 
- 
+
+
+
+
  /* Style pour les boutons burger */
  .burger-bouton button,
  .fermer {
@@ -231,30 +242,30 @@ body {
     background-color: transparent; /* Pas de couleur de fond */
     color: #7e5837f1; /* Couleur du texte */
     transition: background-color 0.3s ease, color 0.3s ease;
- 
- 
+
+
 }
- 
+
 /* Effet de survol */
- 
+
 .burger-bouton button:hover {
     background-color: #7e5837f1; /* Couleur de fond au survol */
     color: #ffffff; /* Couleur du texte au survol */
 }
- 
- 
+
+
 /* Effet de survol pour le bouton de fermeture */
- 
+
 .fermer:hover {
     background-color: #7e5837f1; /* Couleur de fond au survol */
     color: #ffffff; /* Couleur du texte au survol */
 }
-  
+
 .bouton-profil  {
     text-decoration:none ;
 }
- 
- 
+
+
 /* bouton chat */
 
 
@@ -270,8 +281,9 @@ body {
     cursor: pointer;
     z-index: 1000;
     font-size: 0.8vw;
+    display: none;
 }
-  
+
 
 .chat-box {
     position: fixed;
@@ -286,19 +298,19 @@ body {
     padding: 7% 4%;
     overflow-y: auto;
     max-height: 10vw; /* Hauteur maximale de la boîte de chat */
-    z-index: 1000; /* Assurez-vous que la boîte de chat apparaît au-dessus des autres éléments */  
+    z-index: 1000; /* Assurez-vous que la boîte de chat apparaît au-dessus des autres éléments */
     word-wrap: break-word;
-  
+
 }
- 
- 
+
+
 
 .chat-box p {
     font-size: 0.8vw;
     color: white;
 }
- 
- 
+
+
 .close-btn {
     position: sticky;
     width: 100vw;
@@ -323,20 +335,20 @@ body {
     transition: background-color 0.3s ease;
 
 }
- 
- 
- 
+
+
+
 .chat-box button:hover {
     background-color: #e8b889; /* Couleur de fond du bouton au survol */
 }
- 
- 
- 
+
+
+
 #chatContent {
     font-size: 0.8vw;
     color: #fff; /* Couleur du texte dans la boîte de chat */
 }
- 
+
 #chatBox.open {
     display: block;
 }
@@ -352,4 +364,199 @@ body {
 
 #questionForm input {
     margin-bottom: 1vw;
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  .nav li a {
+    color: #7e5837f1;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .logo-text a {
+    font-size: 70px;
+}
+
+.connexion-btn {
+  padding: 15px 35px;
+}
+}
+
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+  .connexion-btn {
+    padding: 15px 35px;
+}
+
+.nav li a {
+  color: #7e5837f1;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.logo-text a {
+  font-size: 65px;
+}
+
+.connexion-btn {
+  padding: 15px 35px;
+}
+.header-left {
+  padding: 0 0px;
+}
+.nav ul {
+  flex-direction: column;
+}
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 899px) {
+  .connexion-btn {
+    padding: 15px 35px;
+}
+
+.nav li a {
+  color: #7e5837f1;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.logo-text a {
+  font-size: 65px;
+}
+
+.connexion-btn {
+  padding: 15px 35px;
+}
+.header-left {
+  padding: 0 0px;
+}
+.nav ul {
+  flex-direction: column;
+}
+.nav {
+  width: 60%;
+}
+}
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+  .connexion-btn {
+    padding: 15px 35px;
+}
+
+.nav li a {
+  color: #7e5837f1;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.logo-text a {
+  font-size: 55px;
+}
+
+.connexion-btn {
+  padding: 12px 22px
+}
+.header-left {
+  padding: 0 0px;
+}
+.nav ul {
+  flex-direction: column;
+}
+.nav {
+  width: 84%;
+}
+.header-center {
+ width: 170px;
+}
+.header {
+  padding: 10px 10px;
+  text-align: center;
+  display: flex;
+}
+.logo-bs {
+  height: 80px;
+  width: 80px;
+}
+}
+
+@media screen and (max-width: 499px) {
+  .connexion-btn {
+    padding: 10px 5px;
+}
+
+.nav li a {
+  color: #7e5837f1;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.logo-text a {
+  font-size: 50px;
+}
+
+.header-left {
+  padding: 0 0px;
+}
+.nav ul {
+  flex-direction: column;
+}
+.nav {
+  width: 84%;
+}
+.header-center {
+ width: 170px;
+}
+.header {
+  padding: 10px 5px;
+  text-align: center;
+  display: flex;
+}
+.logo-bs {
+  height: 80px;
+  width: 80px;
+}
+}
+/* Masquer le bouton par défaut */
+.nav-toggle {
+  display: none;
+}
+
+/* Media query pour les écrans de moins de 1110px */
+@media screen and (max-width: 1110px) {
+  .nav ul {
+    display: none; /* Masquer la navigation */
+  }
+  .nav-toggle {
+    display: block; /* Afficher le bouton */
+  }
+}
+
+
+.nav-visible ul {
+  display: block; /* Affiche la navigation lorsque navVisible est vrai */
+}
+
+.nav-toggle {
+  background-color: #7e5837f1;
+  border: 1px solid #fff;
+  color: #02282e;
+  padding: 15px 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
