@@ -1,0 +1,27 @@
+.section-title {
+  text-align: center;
+  color: #7e5837;
+}
+
+p {
+  color: #7e5837;
+
+}
+
+img {
+  max-height: 90%;
+}
+
+.ligne {
+  border: 2px solid red;
+  height: 4px;
+}
+
+.textpresentation1{
+  display: flex;
+}
+
+.espacement {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
