@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function toggleNav() {
   var nav = document.querySelector('.nav ul');
-  if (window.innerWidth <= 1101) {
+  if (window.innerWidth <= 900) {
       if (nav.style.display === 'block') {
           nav.style.display = 'none';
       } else {
@@ -21,7 +21,7 @@ function toggleNav() {
 
 function handleResize() {
   var nav = document.querySelector('.nav ul');
-  if (window.innerWidth > 1101) {
+  if (window.innerWidth > 900) {
       nav.style.display = '';
   } else {
   }
